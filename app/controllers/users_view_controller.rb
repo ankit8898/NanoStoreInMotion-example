@@ -8,6 +8,7 @@ class UsersViewController < UIViewController
   def loadView
     views = NSBundle.mainBundle.loadNibNamed "UsersViewController", owner:self, options:nil
     self.view = views[0]
+    self.title = "New User"
   end
 
   def viewDidLoad

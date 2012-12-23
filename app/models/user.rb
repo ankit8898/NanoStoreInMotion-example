@@ -1,13 +1,13 @@
 class User < NanoStore::Model
   #NanoStore.shared_store = NanoStore.store(:file, '../' + "/nano.db") # persist the data
   attribute :name
-  attribute :mail
+  attribute :email
   attribute :created_at
 
   class << self
-    def create_new name ,mail
+    def create_new name ,email
      obj =  new(name: name,
-                mail: mail,
+                email: email,
                 created_at: Time.now)
      obj.save
     end
