@@ -14,8 +14,7 @@ USERS_CELL_REUSE_ID = "UsersCellId"
   end
  
  def tableView(tableView, numberOfRowsInSection:section)
-  p @users.length
-    @users.length
+   @users.length
 end
 
 
