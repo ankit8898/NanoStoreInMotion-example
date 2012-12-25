@@ -13,6 +13,7 @@ Motion::Project::App.setup do |app|
 
   # Use `rake config' to see complete project settings.
   app.name = 'NNStore-Example'
+  app.icons << 'n.jpg'
   app.pods do
     pod 'NanoStore', '~> 2.1.8'
   end
