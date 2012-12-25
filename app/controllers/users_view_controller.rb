@@ -34,6 +34,7 @@ class UsersViewController < UIViewController
   def enter
     unless isvalidForm
       User.create_new @text_field_name.text , @text_field_mail.text 
+      clearField
       showAlert("Success", title:"Added User.")
     else
      showAlert("Error", title:"Please, fill all the fields.")
@@ -73,6 +74,10 @@ end
 def button
  btn = self.view.viewWithTag BUTTON_TAG
  btn.addTarget(self, action:'enter', forControlEvents:UIControlEventTouchUpInside)
+end
+
+def clearField
+  @text_field_name.text, @text_field_mail.text =  NSString.new,  NSString.new      
 end
 
 def subViewAdder arr 
